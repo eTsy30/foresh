@@ -10,8 +10,6 @@ import img3 from '../../../public/Image/slider/3-min.jpeg'
 import img4 from '../../../public/Image/slider/4-min.jpeg'
 import Image from 'next/image'
 import instagramIcon from '../../../public/Image/icon/instagram.svg'
-import { AddressSuggestions } from 'react-dadata'
-import 'react-dadata/dist/react-dadata.css'
 
 export const Slider = () => {
   const sliderImage = [
@@ -47,7 +45,7 @@ export const Slider = () => {
           sliderImage.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <span className={styles['swiper__title']}>{}</span>
+                <p className={styles['swiper__title']}>{item.title}</p>
                 <div className={styles['swiper__top-gradient']}>
                   {item.title}
                 </div>
