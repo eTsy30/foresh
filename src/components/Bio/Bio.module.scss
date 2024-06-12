@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+.bio {
+  &__title {
+    color: $white;
+    font-size: $font-size-large;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+}
+.tab > input[type='radio'] {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+}
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2 {
+  display: block;
+}
+
+.tab > input[type='radio']:checked + label {
+  color: red;
+}

@@ -1,0 +1,39 @@
+@import '@/styles/variables.scss';
+
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &-navigation {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 900px;
+    @media screen and (max-width: 480px) {
+      gap: unset;
+      align-items: center;
+      width: 100%;
+      max-width: unset;
+      min-width: unset;
+      justify-content: space-around;
+    }
+    &__link {
+      flex: 0 0 auto;
+      opacity: 0.7;
+      transition: opacity 200ms ease;
+
+      &:hover {
+        opacity: 1;
+        text-shadow: $white 1px 0 10px;
+        transition: opacity 200ms ease;
+      }
+    }
+    &__line {
+      width: 500px;
+      border: 1px solid #3f3f3f;
+    }
+  }
+}
